@@ -1,0 +1,77 @@
+@font-face {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../eot/Mulish-ExtraLight.eot");
+  src: url("../eot/Mulish-ExtraLight.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("../woff2/Mulish-ExtraLight.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../woff/Mulish-ExtraLight.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../ttf/Mulish-ExtraLight.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../eot/Mulish-Light.eot");
+  src: url("../eot/Mulish-Light.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("../woff2/Mulish-Light.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../woff/Mulish-Light.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../ttf/Mulish-Light.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../eot/Mulish-Regular.eot");
+  src: url("../eot/Mulish-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("../woff2/Mulish-Regular.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../woff/Mulish-Regular.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../ttf/Mulish-Regular.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 600;
+  src: url("../eot/Mulish-Medium.eot");
+  src: url("../eot/Mulish-Medium.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("../woff2/Mulish-Medium.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../woff/Mulish-Medium.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../ttf/Mulish-Medium.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../eot/Mulish-Bold.eot");
+  src: url("../eot/Mulish-Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("../woff2/Mulish-Bold.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../woff/Mulish-Bold.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../ttf/Mulish-Bold.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../eot/Mulish-ExtraBold.eot");
+  src: url("../eot/Mulish-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("../woff2/Mulish-ExtraBold.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../woff/Mulish-ExtraBold.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../ttf/Mulish-ExtraBold.ttf")
+      format("truetype");
+}

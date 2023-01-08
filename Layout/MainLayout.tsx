@@ -1,7 +1,7 @@
 
 
 import Header from "../components/Header/Header";
-//import Footer from '../components/Footer/Footer'
+import Footer from '../components/Footer/Footer'
 // import cookies from "react-cookies";
 import {useRouter} from 'next/router';
 
@@ -27,7 +27,7 @@ const router = useRouter()
            </main>
       {/* <LandingFooter /> */}
      
-      {/* <Footer /> */}
+     <Footer /> 
     </>
   );
 };

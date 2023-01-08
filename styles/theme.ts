@@ -1,6 +1,6 @@
 export const themes = {
     mainBG: "#f5f5f5",
-    grayBG:'##e6e6e6',
+    grayBG:'#e6e6e6',
     mainTextColor:'#abb8c3',
     blue:'#1565C0',
     textStrong:'#2B2B2B',

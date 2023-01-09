@@ -1,19 +1,31 @@
 import React, {useState, useEffect} from 'react'
 import { fetchData } from '../../utiles';
 import BookItem from '../BookItem/BookItem';
+import {Flex, ListConatiner, FlexConatiner} from './styles'
 
-interface Props{
-    title:string
-}
+
+
+
 export interface Item{
     id:number,
+
     volumeInfo:{
-        title:string
+      pageCount:number,
+        title:string,
+        subtitle:string,
+        authors:string[],
+        categort:string[]
+        imageLinks:{
+            smallThumbnail:string,
+            thumbnail:string
+        }
+
+                
     }
 
 }
 
-function Features(title: Props) {
+function Features(title: string) {
     const [data, setData] =useState([])
 
     useEffect( () => {
@@ -22,12 +34,19 @@ function Features(title: Props) {
       }))
     }, [])
 
-//console.log(data)
+console.log(data)
   return (
-    <div>{data&& data.slice(0,5).map((item: Item)=>{
-        return <BookItem key={item.id} item={item}/>
-       
-    })}</div>
+    <FlexConatiner>
+      <Flex>
+        <h2>Art</h2>
+       <ListConatiner>
+    
+        {data&& data.slice(0,5).map((item: Item)=>{
+        return <BookItem key={item.id} item={item}/>          
+    })}
+    </ListConatiner>
+    </Flex>
+    </FlexConatiner>
   )
 }
 

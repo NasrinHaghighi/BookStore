@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
   background-color: #f5f5f5;
   color:#616161;
+
 }
 a {
   color: initial;

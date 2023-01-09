@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const HeaderWrapper = styled.nav`
     position: relative;
     z-index: 99;
-    max-width: 100%;
-    margin:0 140px ;
+    max-width: 1920px;
+ margin:0 auto ;
+ padding:0 50px ;
     height:100px ;
     display:flex ;
     align-items:center ;
@@ -25,13 +26,12 @@ export const Logo = styled.div`
   height:50px ;
 color:#f4b41a;
 font-weight:800 ;
-
   display:flex ;
   justify-content:center ;
   align-items:center ;
   font-size:28px ;
   border-radius:8px ;
-  padding-left: 20px;
+  padding-left: 0px;
     padding-right: 10px;
 
 `

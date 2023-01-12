@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Wapper=styled.div`
+width:100% ;
+height:100px ;
+background-color:#fff ;
+`
 export const HeaderWrapper = styled.nav`
     position: relative;
     z-index: 99;
@@ -10,6 +15,7 @@ export const HeaderWrapper = styled.nav`
     display:flex ;
     align-items:center ;
     justify-content:space-between ;
+   
 `
 
 export const Wrapper = styled.nav`

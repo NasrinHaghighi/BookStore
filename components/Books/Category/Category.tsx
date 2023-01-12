@@ -11,6 +11,8 @@ const category=[
 ]
 function Category() {
 const[title, setTitle]=useState('')
+
+
 const handelSelectcategory=(value:string)=>{
         setTitle(value)
         dispatch(selectedcategory(value))

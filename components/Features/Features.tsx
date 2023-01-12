@@ -1,14 +1,16 @@
 import React, {useState, useEffect} from 'react'
-import { fetchData } from '../../utiles';
+import { fetchFeatures} from '../../utiles';
 import BookItem from '../BookItem/BookItem';
 import {Flex, ListConatiner, FlexConatiner} from './styles'
 
-
+interface Props{
+  title:string
+}
 
 
 export interface Item{
-    id:number,
-
+    id:string,
+    etag:string,
     volumeInfo:{
       pageCount:number,
         title:string,
@@ -19,17 +21,15 @@ export interface Item{
             smallThumbnail:string,
             thumbnail:string
         }
-
-                
+          
     }
-
 }
 
-function Features(title: string) {
+function Features({title} :Props) {
     const [data, setData] =useState([])
 
     useEffect( () => {
-      (fetchData(title).then(function(result){
+      (fetchFeatures(title).then(function(result){
         setData(result.items)
       }))
     }, [])
@@ -42,7 +42,7 @@ console.log(data)
        <ListConatiner>
     
         {data&& data.slice(0,5).map((item: Item)=>{
-        return <BookItem key={item.id} item={item}/>          
+        return <BookItem key={item.etag} item={item}/>          
     })}
     </ListConatiner>
     </Flex>

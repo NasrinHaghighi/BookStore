@@ -10,6 +10,7 @@ export const themes = {
     grayBorder:'#BDBDBD',
    boxshadow:'1px 1px 13px 1px #0000006b',
    socialBoxshadow:'0 5px 4px rgb(0 0 0 / 50%)',
-   red:'#DB1037'
+   red:'#DB1037',
+   graytext:'#616161'
       
   };

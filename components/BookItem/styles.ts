@@ -19,3 +19,7 @@ text-align:center ;
 }
 
 `
+export const ImageDiv=styled.div`
+
+
+`

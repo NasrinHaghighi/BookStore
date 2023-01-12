@@ -1,5 +1,5 @@
 import React from 'react'
-import {HeaderWrapper, Logo, Nav, NavItem, Wrapper,Wrapper2, Lens,Basket, ShopItems} from './styles'
+import {Wapper,HeaderWrapper, Logo, Nav, NavItem, Wrapper,Wrapper2, Lens,Basket, ShopItems} from './styles'
 import { Images } from "../../helpers/Image";
 import Link from "next/link";
 import { RxHome } from "react-icons/rx";
@@ -11,6 +11,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 function Header() {
   return (
+      <Wapper>
     <HeaderWrapper>
         <Wrapper>
         <Logo>logo</Logo>
@@ -36,6 +37,7 @@ function Header() {
         </Wrapper2>
 
     </HeaderWrapper>
+    </Wapper>
   )
 }
 

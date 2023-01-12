@@ -4,8 +4,7 @@ export const BooksConatiner=styled.div`
 max-width: 100%;
  margin:0 auto ;
  padding:0 50px ;
- background-color:beige ;
- padding:30px 0 ;
+padding:30px 0 ;
 
 `
 

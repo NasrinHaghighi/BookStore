@@ -18,8 +18,9 @@ export const Tab=styled.div`
 cursor: pointer;
 font-size:24px ;
 font-weight:400 ;
-
+padding:20px ;
+transition:all .3s ease-in-out ;
 &.active{
-    border:1px solid pink ;
+    border-bottom:3px solid ${props=>props.theme. graytext} ;
 }
 `

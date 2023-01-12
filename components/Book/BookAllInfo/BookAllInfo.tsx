@@ -11,11 +11,16 @@ const tabs=[
 ]
 function BookAllInfo() {
     const [activeTab, setActiveTab] =useState<string>('description')
+    const handelActive=(value:string)=>{
+      return setActiveTab(value)
+    }
   return (
     <Conatiner>
         <Tabs>
            {tabs.map((item, i)=>{
-            return <Tab key={i}  className={ activeTab === item.value ? 'active': ''}>{item.tit}</Tab>
+            return <Tab key={i} 
+            onClick={()=>handelActive(item.value)} 
+            className={ activeTab === item.value ? 'active': ''}>{item.tit}</Tab>
            })}
         </Tabs>
     </Conatiner>

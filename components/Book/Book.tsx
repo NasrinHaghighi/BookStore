@@ -10,12 +10,13 @@ export interface Item{
     id:string,
     etag:string,
     volumeInfo:{
+      previewLink?:string,
       description:string,
       pageCount:number,
         title?:string,
         subtitle:string,
         authors:string[],
-        categort:string[]
+        categories?:string[]
         imageLinks:{
             smallThumbnail:string,
             thumbnail:string
@@ -28,9 +29,10 @@ function Book() {
     const router = useRouter()
     const t=router.query.bookid
     const id = t?.slice(0, t.indexOf('+'))
-    var ans = t?.slice(t.indexOf('+'));
+    var an = t?.slice(t.indexOf('+'));
    console.log(id)
-   console.log(ans?.slice(1))
+   
+  const ans=an?.slice(1)
    const [loading , setLoading] =useState(false)
    const [item, setItem] =useState<Item>()
 
@@ -47,12 +49,6 @@ function Book() {
         setLoading(false)
     },[])
 
-
- 
-    //console.log(item)
-
-
-   
   return (
     <>
     <Container>
@@ -70,7 +66,7 @@ function Book() {
 
      {item && !loading ? <BookInfo item={item}/> : ''}
     </Container>
-    <BookAllInfo />
+    <BookAllInfo item={item}/>
     </>
   )
 }

@@ -24,3 +24,12 @@ transition:all .3s ease-in-out ;
     border-bottom:3px solid ${props=>props.theme. graytext} ;
 }
 `
+export const Content=styled.div`
+width:100% ;
+background-color:${props=>props.theme.grayBG};
+`
+export const InnerContent=styled.div`
+width:60% ;
+margin:0 auto ;
+padding:150px 0 ;
+`

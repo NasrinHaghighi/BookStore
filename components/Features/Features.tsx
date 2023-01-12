@@ -3,9 +3,6 @@ import { fetchFeatures} from '../../utiles';
 import BookItem from '../BookItem/BookItem';
 import {Flex, ListConatiner, FlexConatiner} from './styles'
 
-interface Props{
-  title:string
-}
 
 
 export interface Item{
@@ -25,7 +22,7 @@ export interface Item{
     }
 }
 
-function Features({title} :Props) {
+function Features({ title }: { title: string }) {
     const [data, setData] =useState([])
 
     useEffect( () => {

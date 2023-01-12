@@ -17,10 +17,11 @@ function Header() {
         <Logo>logo</Logo>
         <Nav>
         <NavItem>
-              <RxHome /><span>Home</span> 
+              <RxHome /><Link href='/'><span>Home</span></Link> 
         </NavItem>
         <NavItem>
-              <span>Shop</span> 
+        <Link href='/books'>
+              <span>Shop</span></Link>
         </NavItem>
         <NavItem>
               <FaNewspaper/><span>About us</span> 

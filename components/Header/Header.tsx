@@ -7,7 +7,7 @@ import { FaNewspaper } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { BsSearch } from "react-icons/bs";
 import { FaShoppingCart } from "react-icons/fa";
-
+import DropDown from './Dropdown/DropDown';
 
 function Header() {
   return (
@@ -19,10 +19,9 @@ function Header() {
         <NavItem>
               <RxHome /><Link href='/'><span>Home</span></Link> 
         </NavItem>
-        <NavItem>
         <Link href='/books'>
-              <span>Shop</span></Link>
-        </NavItem>
+        <DropDown />
+        </Link> 
         <NavItem>
               <FaNewspaper/><span>About us</span> 
         </NavItem>

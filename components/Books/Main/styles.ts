@@ -1,7 +1,28 @@
 import styled from "styled-components";
 
+export const Container=styled.div`
 
+`
+export const Top=styled.div`
+display:flex ;
+justify-content:space-between ;
+height:150px ;
+width:100% ;
+padding:80px ;
+`
+export const Grid=styled.div`
 
+padding:5px ;
+&>span{
+    width:40px ;
+    height:40px ;
+    font-size:30px ;
+    margin:0 10px ;
+    &.active{
+        color:orange;
+    }
+}
+`
 export const BooksConatiner=styled.div`
 display: grid;
 grid-template-columns: repeat(4, 1fr);
@@ -49,3 +70,8 @@ font-weight:700 ;
 }
 
 `
+export const BooksConatiner2=styled.div`
+
+
+`
+

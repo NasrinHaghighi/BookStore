@@ -15,7 +15,7 @@ function BookInfo({item}:ItemProps) {
     <h2>{item.volumeInfo.subtitle}</h2>
     <Authors>
    
-    {item.volumeInfo.authors.map((item, i)=>{
+    {item.volumeInfo.authors?.map((item, i)=>{
         return <span> {item},{' '} </span>
     })}
     

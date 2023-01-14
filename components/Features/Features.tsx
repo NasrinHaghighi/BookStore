@@ -9,6 +9,8 @@ export interface Item{
     id:string,
     etag:string,
     volumeInfo:{
+      description:string,
+
       pageCount:number,
         title:string,
         subtitle:string,

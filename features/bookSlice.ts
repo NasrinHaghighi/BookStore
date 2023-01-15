@@ -1,4 +1,4 @@
-import { amber } from "@material-ui/core/colors";
+
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import Book from "../components/Book/Book";
 import { Books } from "../constants/MOCK_DATA";

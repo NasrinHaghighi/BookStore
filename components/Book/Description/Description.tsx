@@ -7,7 +7,7 @@ interface ItemProps{
 
   
 function Description({item}:ItemProps) {
-    console.log(item)
+   // console.log(item)
   return (
     <>
     <Tit>About book "{item?.volumeInfo.title}"</Tit>

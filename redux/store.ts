@@ -1,4 +1,5 @@
 import {combineReducers, configureStore } from '@reduxjs/toolkit'
+import  BookSlice  from '../features/bookSlice';
 //import { createWrapper } from 'next-redux-wrapper'
 import CategorySlice from '../features/CategorySlice';
 import PageSlice from '../features/PageSlice';
@@ -6,7 +7,8 @@ import PageSlice from '../features/PageSlice';
 export const store = configureStore({
       reducer: {
         category:CategorySlice,
-        page:PageSlice
+        page:PageSlice,
+        books:BookSlice
    },
    middleware: (getDefaultMiddleware) =>
    getDefaultMiddleware({

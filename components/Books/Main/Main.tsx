@@ -30,7 +30,7 @@ function Main() {
     setLoading(true);
     setPage(0);
     setData([]);
-    console.log(page);
+    //console.log(page);
     (fetchData(category, page*15+1).then(function(result){
                setData ([...result.items])
        }))

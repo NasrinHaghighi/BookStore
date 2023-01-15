@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BookItem2Container=styled.div`
 display:flex ;
-margin-bottom:80px ;
+margin-bottom:50px ;
 transition: all 0.6s ease-out;
 display:grid ;
 grid-template-columns:1fr 3fr ;

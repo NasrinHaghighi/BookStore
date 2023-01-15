@@ -1,11 +1,47 @@
-import styled from "styled-components";
+import styled ,{ keyframes } from "styled-components";
+
+const fadein = keyframes`
+from { opacity: 0;top:-50px }
+    to { opacity:1;top:0px };
+    
+`;
+export const BoxConatiner = styled.div`
+position:relative ;
 
 
+`;
+export const AlertBox = styled.div`
+background-color:${props=>props.theme.blue2} ;
+border-radius:8px ;
+max-width: 1920px;
+
+  left: 0; 
+  right: 0; 
+top:-50px ;
+  margin-left: auto; 
+  margin-right: auto; 
+ padding: 50px ;
+ opacity:0;
+  position:absolute ;
+ box-shadow:${props=>props.theme.alertBoxshdow} ;
+ color: ${props=>props.theme.textStrong};
+ font-size: 28px;
+ font-weight:700 ;
+
+ &>span{
+  font-style:italic ;
+  color: #ffff;
+ }
+ &.show{
+  animation:${fadein} .8s .5s forwards;
+  
+ }
+`;
 export const Container=styled.div`
 
 max-width: 1920px;
  margin:0 auto ;
- padding:100px 50px ;
+ padding:150px 50px ;
  display: grid;
 grid-template-columns: 2fr 3fr;
 grid-template-rows: 1fr;

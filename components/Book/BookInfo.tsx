@@ -1,12 +1,30 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Item} from './Book'
 import BookAllInfo from './BookAllInfo/BookAllInfo'
 import {ConatinerInfo, Authors, Discription,Price, BtnConatiner,  Button, Input} from './styles'
+import {addBook} from '../../features/bookSlice'
+import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 
 interface ItemProps{
     item:Item
+    setShowAlert:any
 }
-function BookInfo({item}:ItemProps) {
+function BookInfo({item, setShowAlert}:ItemProps) {
+  const dispatch=useAppDispatch()
+  const [amount, setAmount] =useState<number>(1)
+
+
+  const addToCardHander=()=>{
+    setShowAlert(true)
+    dispatch(addBook({
+      id:`${item.id}+${item.volumeInfo.title}`, 
+      image:item.volumeInfo.imageLinks.thumbnail ,
+      authors:item.volumeInfo.authors,
+      amount:amount
+    }))
+  }
+
+  
   return (
     <>
     <ConatinerInfo>
@@ -34,7 +52,7 @@ function BookInfo({item}:ItemProps) {
    <BtnConatiner>
   
     <Input type="number" placeholder='1'   min="1" max='10'/>
-    <Button>Add to card</Button> 
+    <Button onClick={addToCardHander}>Add to card</Button> 
    </BtnConatiner>
   
         </ConatinerInfo>

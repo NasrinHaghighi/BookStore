@@ -24,7 +24,10 @@ function BookInfo({item, setShowAlert}:ItemProps) {
     }))
   }
 
-  
+  const amountHandel=(e:any)=>{
+    setAmount(e.target.value)
+  }
+  console.log(amount)
   return (
     <>
     <ConatinerInfo>
@@ -51,7 +54,7 @@ function BookInfo({item, setShowAlert}:ItemProps) {
    </Price> 
    <BtnConatiner>
   
-    <Input type="number" placeholder='1'   min="1" max='10'/>
+    <Input type="number" placeholder='1' value={amount}  min="1" max='10' onChange={amountHandel}/>
     <Button onClick={addToCardHander}>Add to card</Button> 
    </BtnConatiner>
   

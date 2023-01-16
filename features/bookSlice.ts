@@ -23,28 +23,22 @@ export const BookSlice= createSlice({
     initialState,
     reducers:{
         addBook:(state, action:PayloadAction<Book>)=>{
-          if(state.books.length>0){
-            let temp=state.books.find(b=>console.log(b.id))
-            if(temp){
-                console.log(action.payload.id +'temp is not undefind')
-            }else{
-                console.log(action.payload.id+ 'is undefind')
-            }
-          }else{
-           
-           console.log(action.payload.id+'avalin')
-           state.books.push(action.payload)
-          }
+      let tempo=state.books.find((b)=>b.id === action.payload.id)
+        if(tempo){
+            let tempcard=state.books.map((b)=>{
+                if(b.id === action.payload.id){
+                    return {...b, amount:Number(b.amount) +Number(action.payload.amount) }
+                }else{
+                    return {...b}
+                }
+                            })
+                            state.books=tempcard
+        }   else{
+            state.books.push(action.payload)
+        }
             
-        //console.log(action.payload.id)
+        
 
-        //  if(temp){
-        //     state.books.find((item)=>{
-        //         return {...item, amount:'50'}
-        //       })
-        //  }else{
-        //     state.books.push(action.payload)
-        //  }
         },
  
     }

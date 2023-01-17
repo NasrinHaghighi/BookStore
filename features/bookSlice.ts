@@ -8,12 +8,17 @@ interface Book{
    id:string,
    image:string,
    amount:number,
-   authors:string[]
+   authors:string[],
+   price:number
 
 }
 interface Books{
     books:Book[]
 }
+// interface AmountProps{
+//    item:Book,
+//    newAmount:number,
+// }
 const initialState:Books={
     books:[]
 }
@@ -36,13 +41,16 @@ export const BookSlice= createSlice({
         }   else{
             state.books.push(action.payload)
         }
-            
-        
+         
 
         },
- 
-    }
+        addNewAmount:(state, action:PayloadAction<any>)=>{
+           console.log(action.payload)
+      
+              },
+    },
+  
 })
 
-export const {addBook} =BookSlice.actions
+export const {addBook, addNewAmount} =BookSlice.actions
 export default BookSlice.reducer

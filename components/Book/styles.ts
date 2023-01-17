@@ -13,7 +13,10 @@ position:relative ;
 export const AlertBox = styled.div`
 background-color:${props=>props.theme.blue2} ;
 border-radius:8px ;
-max-width: 1920px;
+max-width: 1720px;
+display:flex ;
+justify-content:space-between ;
+align-items:center ;
 
   left: 0; 
   right: 0; 
@@ -27,11 +30,11 @@ top:-50px ;
  color: ${props=>props.theme.textStrong};
  font-size: 28px;
  font-weight:700 ;
-
+&>div{
  &>span{
   font-style:italic ;
   color: #ffff;
- }
+ }}
  &.show{
   animation:${fadein} .8s .5s forwards;
   
@@ -118,3 +121,20 @@ font-weight:600 ;
     
   }
 `;
+
+export const SeeCardBtn=styled.button`
+color:#fff !important;
+font-size:18px ;
+padding:10px 15px;
+border:none ;
+border-radius:8px ;
+transition:all 0.5 ease-in-out ;
+background-color:${props=>props.theme.orange} ;
+float:left;
+z-index:10;
+&:hover{
+ color:#fff !important;
+ box-shadow:${props=>props.theme.boxshadow} !important;
+ transform:scale(1.1)!important;
+}
+`

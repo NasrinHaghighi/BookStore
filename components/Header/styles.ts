@@ -8,7 +8,7 @@ background-color:#fff ;
 export const HeaderWrapper = styled.nav`
     position: relative;
     z-index: 99;
-    max-width: 1920px;
+    max-width: 1520px;
  margin:0 auto ;
  padding:0 50px ;
     height:100px ;

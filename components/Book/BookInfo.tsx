@@ -20,14 +20,15 @@ function BookInfo({item, setShowAlert}:ItemProps) {
       id:`${item.id}+${item.volumeInfo.title}`, 
       image:item.volumeInfo.imageLinks.thumbnail ,
       authors:item.volumeInfo.authors,
-      amount:amount
+      amount:amount,
+      price:item.volumeInfo.pageCount>0 ? item.volumeInfo.pageCount : 100
     }))
   }
 
   const amountHandel=(e:any)=>{
     setAmount(e.target.value)
   }
-  console.log(amount)
+ 
   return (
     <>
     <ConatinerInfo>

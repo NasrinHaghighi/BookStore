@@ -1,10 +1,11 @@
 import React ,{useEffect, useState} from 'react'
-import {BoxConatiner,Container, ImageDiv,  AlertBox} from './styles'
+import {BoxConatiner,Container, ImageDiv,  AlertBox, SeeCardBtn} from './styles'
 import { useRouter } from 'next/router'
 import { fetchitem } from '../../utiles';
 import { Images } from '../../helpers/Image'
 import BookInfo from './BookInfo';
 import BookAllInfo from './BookAllInfo/BookAllInfo';
+import Link from 'next/link'
 
 
 export interface Item{
@@ -53,7 +54,10 @@ function Book() {
 
   return (
     <BoxConatiner>
-    <AlertBox className={showAlert ? 'show' : ''}>Book " <span>{item?.volumeInfo.title} </span>" added to yor card
+    <AlertBox className={showAlert ? 'show' : ''}>
+    
+      <div>Book " <span>{item?.volumeInfo.title} </span>" added to yor card</div>
+      <SeeCardBtn><Link href='/card'>View card</Link></SeeCardBtn>
      </AlertBox> 
     <Container>
      

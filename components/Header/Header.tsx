@@ -7,7 +7,7 @@ import { FaNewspaper } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { BsSearch } from "react-icons/bs";
 import { FaShoppingCart } from "react-icons/fa";
-import DropDown from './Dropdown/DropDown';
+
 
 function Header() {
   return (

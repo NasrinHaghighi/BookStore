@@ -7,7 +7,7 @@ width:100% ;
 color:#ffff ;
 font-size:20px ;
 display: grid;
-grid-template-columns:0.25fr 0.5fr 2fr 1fr .75fr 1fr;
+grid-template-columns:0.5fr 0.5fr 2fr 1fr .75fr 1fr;
 grid-column-gap: 0px;
 grid-row-gap: 0px;
 align-items:center ;

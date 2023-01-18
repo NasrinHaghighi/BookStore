@@ -19,9 +19,9 @@ function Header() {
         <NavItem>
               <RxHome /><Link href='/'><span>Home</span></Link> 
         </NavItem>
-        <Link href='/books'>
-        <DropDown />
-        </Link> 
+        <NavItem>
+             <Link href='/books'><span>Shop</span></Link> 
+        </NavItem>
         <NavItem>
               <FaNewspaper/><span>About us</span> 
         </NavItem>

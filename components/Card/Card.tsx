@@ -2,6 +2,7 @@ import React from 'react'
 import CardItem from './CardItem/CardItem'
 import {Container,Titles} from './styles'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
+import EmptyCard from './Emptycard/EmptyCard'
 
 function Card() {
   const dispatch=useAppDispatch()
@@ -17,9 +18,9 @@ function Card() {
         <span>Amount</span>
         <span>Total price</span>
       </Titles>
-      {books && books.map((item, index)=>{
+      {books.length>0 ? books.map((item, index)=>{
         return <CardItem item={item} index={index}/>
-      })}
+      }): <EmptyCard />}
 
     </Container>
   )

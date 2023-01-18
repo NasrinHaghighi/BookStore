@@ -45,12 +45,19 @@ export const BookSlice= createSlice({
 
         },
         addNewAmount:(state, action:PayloadAction<any>)=>{
-           console.log(action.payload)
-      
+           state.books.forEach(function(item, i) { if (item.id == action.payload.id) state.books[i] =action.payload; });
+
               },
+              deletItem:(state, action:PayloadAction<any>)=>{
+               const tempCard= state.books.filter((item)=>{
+                return item.id !== action.payload.id
+               })
+               state.books=tempCard
+     
+                   },
     },
   
 })
 
-export const {addBook, addNewAmount} =BookSlice.actions
+export const {addBook, addNewAmount, deletItem} =BookSlice.actions
 export default BookSlice.reducer

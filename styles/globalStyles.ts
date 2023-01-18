@@ -62,6 +62,9 @@ li {
   list-style: none;
 }
 
+.css-187mznn-MuiSlider-root {
+  color:#ffa500 !important;
+}
 `
 
 export default MyGlobalStyle;

@@ -1,4 +1,4 @@
-//import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 //import "../styles/";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";

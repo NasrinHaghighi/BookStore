@@ -1,5 +1,5 @@
 import React from 'react'
-import {BookItemContainer} from './styles'
+import {BookItemContainer,Tit} from './styles'
 import {Item} from '../Features/Features'
 import {Images} from '../../helpers/Image'
 import Link from 'next/link'
@@ -12,7 +12,7 @@ function BookItem({item}:ItemProps) {
     <BookItemContainer>
        <Link href={`/books/${item.id}+${item.volumeInfo.title}`}>
            <Images src={item.volumeInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : ''} width={180} height={200}   alt="book"/>
-          <h4>{item.volumeInfo.title}</h4>
+          <Tit>{item.volumeInfo.title}</Tit>
          <h5>{item.volumeInfo.authors? item.volumeInfo.authors[0]: ''}</h5>  
        <h4>{item.volumeInfo.pageCount> 0 ? item.volumeInfo.pageCount : 100 }, 00 e</h4>
        </Link>

@@ -8,6 +8,16 @@ const category=[
     {tit:'Art', value :'art'},
     {tit:'Economy', value :'economy'},
     {tit:'Success', value :'success'},
+    {tit:'Classics', value:'classics'},
+    {tit:'Crime', value:'crime'},
+    {tit:'Fantasy', value:'fantasy'},
+    {tit:'Historical fiction', value:'historical'},
+    {tit:'War', value:'War'},
+    {tit:'Romance', value:'Romance'},
+    {tit:'Short stories', value:'short stories'},
+    {tit:'Women’s fiction', value:'Women'},
+    {tit:'Mystery', value:'mystery'},
+
 ]
 function Category() {
 const[title, setTitle]=useState('')

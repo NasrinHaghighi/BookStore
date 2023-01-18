@@ -3,12 +3,14 @@ import  BookSlice  from '../features/bookSlice';
 //import { createWrapper } from 'next-redux-wrapper'
 import CategorySlice from '../features/CategorySlice';
 import PageSlice from '../features/PageSlice';
+import priceFilter from '../features/priceFilter'
 
 export const store = configureStore({
       reducer: {
         category:CategorySlice,
         page:PageSlice,
-        books:BookSlice
+        books:BookSlice,
+        price:priceFilter
    },
    middleware: (getDefaultMiddleware) =>
    getDefaultMiddleware({

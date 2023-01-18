@@ -44,7 +44,7 @@ function Book() {
          fetchitem(id as string).then(function(result){
        const data=result.items
        //console.log(data)
-     const tt= data.find((t:any)=>{
+     const tt=data&& data.find((t:any)=>{
         return t.volumeInfo.title = ans
       })
      setItem(tt)

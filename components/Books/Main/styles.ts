@@ -12,12 +12,15 @@ padding:80px ;
 `
 export const Grid=styled.div`
 
-padding:5px ;
+
 &>span{
-    width:40px ;
-    height:40px ;
+   
+    cursor: pointer;
+    width:30px ;
+    height:30px ;
     font-size:30px ;
     margin:0 10px ;
+   
     &.active{
         color:orange;
     }
@@ -25,17 +28,17 @@ padding:5px ;
 `
 export const BooksConatiner=styled.div`
 display: grid;
-grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(3, 1fr);
 grid-template-rows: 1fr;
-grid-column-gap: 0px;
+grid-column-gap:20px;
 grid-row-gap: 20px;
 @media (max-width:1650px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
 
 }
 @media (max-width:1350px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 
 
 }

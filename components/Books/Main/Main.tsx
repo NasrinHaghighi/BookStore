@@ -9,6 +9,7 @@ import ToTop from '../../ToTop/ToTop';
 import { TfiLayoutGrid3Alt } from "react-icons/tfi";
 import { TfiLayoutListThumbAlt } from "react-icons/tfi";
 import BookItem2 from '../../BookItem2/BookItem2';
+import FilterPrice from '../FilterPrice/FilterPrice';
 
 
 
@@ -20,9 +21,14 @@ function Main() {
     const category = useAppSelector(state=>state.category?.category)
     const [grid, setGrid] =useState(true)
 
-
-
-
+const price=useAppSelector(state=>state.price.price)
+console.log(price)
+useEffect(() => {
+const t= data.filter((item)=>{
+ return item.volumeInfo.pageCount>= price[0] && item.volumeInfo.pageCount <= price[1]
+})
+setData(t)
+}, [price])
 
 
 //category cahnged make new arr
@@ -31,7 +37,7 @@ function Main() {
     setPage(0);
     setData([]);
     //console.log(page);
-    (fetchData(category, page*15+1).then(function(result){
+    (fetchData(category, page*15).then(function(result){
                setData ([...result.items])
        }))
       setLoading(false);
@@ -58,7 +64,9 @@ function Main() {
     <>
     <Container>
     <Top> 
-    <div>sort</div>
+    <div>
+      <FilterPrice />
+    </div>
    
       <Grid>
           <span className={grid ? '' : 'active'} onClick={()=>setGrid(!grid)}><TfiLayoutListThumbAlt/></span>

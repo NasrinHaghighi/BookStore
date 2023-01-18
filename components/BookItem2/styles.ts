@@ -16,7 +16,7 @@ export const InfoContainer=styled.div`
 
 padding-left:30px ;
 &>h4{
-    font-size:32px;
+    font-size:24px;
     font-weight:700 ;
     margin-bottom:30px ;
 
@@ -32,11 +32,11 @@ padding-left:30px ;
 }
 `
 export const ShowMoreBtn=styled.button`
-width:100px;
-height:30px ;
+width:130px;
+height:40px ;
 border-radius:8px ;
-border:3px solid ${props=>props.theme.orange} ;
-color:${props=>props.theme.orange} ;
+border:3px solid ${props=>props.theme.orange} !important;
+color:${props=>props.theme.orange} !important;
 &:hover{
     color:${props=>props.theme.orange} ;
     border:3px solid ${props=>props.theme.textStrong} ;

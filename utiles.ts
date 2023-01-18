@@ -21,13 +21,13 @@ export const fetchitem =async (title:string)=>{
              return res
              
              } 
-             export const fetchFeatures =async (title:string)=>{
+ export const fetchFeatures =async (title:string)=>{
               //console.log(title)
                   //const {difficulty, category, number}=start
                   const url=`https://www.googleapis.com/books/v1/volumes?q=${title}&key=AIzaSyDIvkAJdlocEzN72lwKjgR0tF76FGRpp98`
                   const data= await fetch(url)
                   const res=await data.json()
-                 console.log(res)
+                 //console.log(res)
                    return res
                    
-                   } 
+  } 

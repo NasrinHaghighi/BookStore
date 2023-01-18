@@ -10,7 +10,7 @@ padding:30px 0 ;
 
 
 export const InnerConatiner=styled.div`
-max-width: 1920px;
+max-width: 1520px;
  margin:0 auto ;
  padding:0 50px ;
  display: grid;

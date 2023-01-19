@@ -31,7 +31,7 @@ function Header() {
         </Nav>
         </Wrapper>
         <Wrapper2>
-        <Lens><BsSearch /></Lens>
+        <Lens ><BsSearch /></Lens>
         <Basket><ShopItems>2</ShopItems> <FaShoppingCart />  </Basket>
             
         </Wrapper2>

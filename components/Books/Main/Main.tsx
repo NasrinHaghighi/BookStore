@@ -64,9 +64,9 @@ setData(t)
     <>
     <Container>
     <Top> 
-    <div>
+    {/* <div>
       <FilterPrice />
-    </div>
+    </div> */}
    
       <Grid>
           <span className={grid ? '' : 'active'} onClick={()=>setGrid(!grid)}><TfiLayoutListThumbAlt/></span>

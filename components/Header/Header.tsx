@@ -1,5 +1,5 @@
-import React from 'react'
-import {Wapper,HeaderWrapper, Logo, Nav, NavItem, Wrapper,Wrapper2, Lens,Basket, ShopItems} from './styles'
+import React ,{useState}from 'react'
+import {Wapper,HeaderWrapper, Logo, Nav, NavItem, Wrapper,Wrapper2, Lens,Basket, ShopItems, DropDownToggle, DropDownMenu, Input} from './styles'
 import { Images } from "../../helpers/Image";
 import Link from "next/link";
 import { RxHome } from "react-icons/rx";
@@ -7,9 +7,12 @@ import { FaNewspaper } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { BsSearch } from "react-icons/bs";
 import { FaShoppingCart } from "react-icons/fa";
+import { Dropdown } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 function Header() {
+      const [show, setShow] = useState(false);
   return (
       <Wapper>
     <HeaderWrapper>
@@ -31,7 +34,24 @@ function Header() {
         </Nav>
         </Wrapper>
         <Wrapper2>
-        <Lens ><BsSearch /></Lens>
+            {/* *****************SEARCH***** */}
+        <Lens >
+        <Dropdown
+      onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)}
+    >
+      <DropDownToggle className="main-style" id="dropdown-basic">
+       <BsSearch />
+      </DropDownToggle>
+
+      <DropDownMenu >
+        <Dropdown.Item >
+            <Input></Input>
+        </Dropdown.Item>
+       
+      </DropDownMenu>
+    </Dropdown>
+        </Lens>
         <Basket><ShopItems>2</ShopItems> <FaShoppingCart />  </Basket>
             
         </Wrapper2>

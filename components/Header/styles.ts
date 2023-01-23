@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Dropdown } from "react-bootstrap";
 
 export const Wapper=styled.div`
 width:100% ;
@@ -84,7 +85,7 @@ position:relative ;
 `
 
 export const Lens = styled.div`
-color: ${props=>props.theme.linkColor};
+
 font-size:18px ;
 padding:0 30px ;
 `
@@ -106,3 +107,29 @@ border-radius: 10px;
     font-size: 11px;
     margin-right:15px ;
 `
+
+export const DropDownToggle = styled(Dropdown.Toggle)`
+  background-color: transparent !important;
+ border:none !important ;
+  position: relative;
+  overflow: hidden;
+  padding:0 30px ;
+  font-size:18px ;
+  color:${props=>props.theme.orange} !important;
+  &::after{
+display:none ;
+  }
+
+  `
+  export const DropDownMenu = styled(Dropdown.Menu)`
+  /* right: -16px !important; */
+  transform: translate(-250px, 40px) !important;  
+  width:300px ;
+
+ 
+`;
+export const Input = styled.input`
+
+
+
+`;

@@ -65,6 +65,13 @@ li {
 .css-187mznn-MuiSlider-root {
   color:#ffa500 !important;
 }
+
+
+.vertical-timeline::before {
+ background:#f4e6 ;
+}
+
+
 `
 
 export default MyGlobalStyle;

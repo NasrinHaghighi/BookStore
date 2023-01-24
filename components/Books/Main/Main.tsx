@@ -9,6 +9,7 @@ import ToTop from '../../ToTop/ToTop';
 import { TfiLayoutGrid3Alt } from "react-icons/tfi";
 import { TfiLayoutListThumbAlt } from "react-icons/tfi";
 import BookItem2 from '../../BookItem2/BookItem2';
+import Basket from '../../Basket/Basket';
 //import FilterPrice from '../FilterPrice/FilterPrice';
 
 
@@ -20,29 +21,36 @@ function Main() {
     const dispatch=useAppDispatch()
     const category = useAppSelector(state=>state.category?.category)
     const [grid, setGrid] =useState(true)
+    const [searchTerm, setSearchTerm] =useState('')
     const [invalidSearchTerm, setInvalidSearchTerm] =useState(false)
 
 const price=useAppSelector(state=>state.price.price)
-const searchTerm=useAppSelector(state=>state.searchItem.search)
-//console.log(searchTerm)
+
+console.log(category)
 useEffect(() => {
 const t= data.filter((item)=>{
  return item.volumeInfo.pageCount>= price[0] && item.volumeInfo.pageCount <= price[1]
 })
 setData(t)
 }, [price])
-
-
 //category cahnged make new arr
    useEffect( () => {
     setLoading(true);
     setPage(0);
     setData([]);
     //console.log(page);
-    (fetchData(category, page*15).then(function(result){
-               setData ([...result.items])
-       }))
+    if(category.length>1){
+      setInvalidSearchTerm(false);
+      (fetchData(category, page*15).then(function(result){
+        setData ([...result.items])
+       
+      }))
+    }else{
+     setInvalidSearchTerm(true)
+    }
+    
       setLoading(false);
+    
     }, [category])
 
 
@@ -61,21 +69,7 @@ setData(t)
    const handelPage=()=>{
     setPage(page+1)
    }
-//if searchTerm change in redux//
-   useEffect( () => {
-    setLoading(true);
-    if(searchTerm.length>1){
-      setInvalidSearchTerm(false);
-      (fetchData(searchTerm, page*15+1).then(function(result){
-        setData ([...result.items])
-}))
-setLoading(false);
-    }else{
-      setInvalidSearchTerm(true)
-    }
-    
-   
-    }, [searchTerm.length])
+
    
   return (
     <>
@@ -92,7 +86,7 @@ setLoading(false);
        
       </Grid>
     </Top>
-    {!invalidSearchTerm ? 
+  {invalidSearchTerm ? <p>33</p> :
     <div>
      { grid ? 
     <BooksConatiner>
@@ -115,7 +109,7 @@ setLoading(false);
    
  <LoadMore onClick={handelPage}>More</LoadMore>
 </BooksConatiner2> }
-</div>: <p>ççç</p>}
+</div> }
 
     </Container>
    
@@ -140,3 +134,17 @@ export default Main
 //        })
 //      if(node) observer.current.observe(node)
 //        },[loading])
+
+
+//if searchTerm change in redux//
+//    useEffect( () => {
+//     setLoading(true);
+//     if(searchTerm.length>1){
+      
+//       (fetchData(searchTerm, page*15+1).then(function(result){
+//         setData ([...result.items])
+// }))
+// setLoading(false);
+//     }
+   
+//     }, [searchTerm.length])

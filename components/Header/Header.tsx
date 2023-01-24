@@ -1,30 +1,35 @@
 import React ,{useState}from 'react'
-import {Wapper,HeaderWrapper, Logo, Nav, NavItem, Wrapper,Wrapper2, Lens,Basket, ShopItems, DropdownS,DropDownToggle, DropDownMenu, Input} from './styles'
+import {Wapper,HeaderWrapper, Logo, Nav, NavItem, Wrapper,Wrapper2, Lens, DropdownS,DropDownToggle, DropDownMenu, Input} from './styles'
 import { Images } from "../../helpers/Image";
 import Link from "next/link";
 import { RxHome } from "react-icons/rx";
 import { FaNewspaper } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { BsSearch } from "react-icons/bs";
-import { FaShoppingCart } from "react-icons/fa";
+
 import { Dropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { useRouter } from "next/router";
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
-import {selectedSearch} from '../../features/searchSlice'
+
+import { selectedcategory } from '../../features/CategorySlice'
+import Basket from '../Basket/Basket';
 
 function Header() {
+  const category = useAppSelector(state=>state.category?.category)
   const dispatch=useAppDispatch()
       const [show, setShow] = useState(false);
       const [route, setRoute] = useState()
       const router = useRouter()
      const searchHandel=(e:any)=>{
       e.preventDefault()
-      dispatch(selectedSearch(e.target.value))
+      dispatch(selectedcategory(e.target.value))
      setTimeout(() => {
       router.push("/books")
+
      }, 1000);
+   
      
      
      }
@@ -61,14 +66,14 @@ function Header() {
 
       <DropDownMenu show={show}>
         <Dropdown.Item >
-            <Input onChange={searchHandel}></Input>
+            <Input onChange={searchHandel} value={category}></Input>
         </Dropdown.Item>
        
       </DropDownMenu>
     </DropdownS>
         </Lens>
            {/* *****************SEARCH***** */}
-        <Basket><ShopItems>2</ShopItems> <FaShoppingCart />  </Basket>
+        <Basket />
             
         </Wrapper2>
 

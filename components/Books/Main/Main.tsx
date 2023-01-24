@@ -9,7 +9,7 @@ import ToTop from '../../ToTop/ToTop';
 import { TfiLayoutGrid3Alt } from "react-icons/tfi";
 import { TfiLayoutListThumbAlt } from "react-icons/tfi";
 import BookItem2 from '../../BookItem2/BookItem2';
-import Basket from '../../Basket/Basket';
+import Invalid from '../../Invalid/Invalid';
 //import FilterPrice from '../FilterPrice/FilterPrice';
 
 
@@ -86,7 +86,7 @@ setData(t)
        
       </Grid>
     </Top>
-  {invalidSearchTerm ? <p>33</p> :
+  {invalidSearchTerm ? <Invalid /> :
     <div>
      { grid ? 
     <BooksConatiner>

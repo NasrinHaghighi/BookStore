@@ -4,13 +4,15 @@ import  BookSlice  from '../features/bookSlice';
 import CategorySlice from '../features/CategorySlice';
 import PageSlice from '../features/PageSlice';
 import priceFilter from '../features/priceFilter'
+import SearchSlice from '../features/searchSlice';
 
 export const store = configureStore({
       reducer: {
         category:CategorySlice,
         page:PageSlice,
         books:BookSlice,
-        price:priceFilter
+        price:priceFilter,
+        searchItem:SearchSlice
    },
    middleware: (getDefaultMiddleware) =>
    getDefaultMiddleware({

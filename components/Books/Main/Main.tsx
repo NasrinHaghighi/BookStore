@@ -9,7 +9,7 @@ import ToTop from '../../ToTop/ToTop';
 import { TfiLayoutGrid3Alt } from "react-icons/tfi";
 import { TfiLayoutListThumbAlt } from "react-icons/tfi";
 import BookItem2 from '../../BookItem2/BookItem2';
-import FilterPrice from '../FilterPrice/FilterPrice';
+//import FilterPrice from '../FilterPrice/FilterPrice';
 
 
 
@@ -20,9 +20,11 @@ function Main() {
     const dispatch=useAppDispatch()
     const category = useAppSelector(state=>state.category?.category)
     const [grid, setGrid] =useState(true)
+    const [invalidSearchTerm, setInvalidSearchTerm] =useState(false)
 
 const price=useAppSelector(state=>state.price.price)
-console.log(price)
+const searchTerm=useAppSelector(state=>state.searchItem.search)
+//console.log(searchTerm)
 useEffect(() => {
 const t= data.filter((item)=>{
  return item.volumeInfo.pageCount>= price[0] && item.volumeInfo.pageCount <= price[1]
@@ -59,22 +61,40 @@ setData(t)
    const handelPage=()=>{
     setPage(page+1)
    }
+//if searchTerm change in redux//
+   useEffect( () => {
+    setLoading(true);
+    if(searchTerm.length>1){
+      setInvalidSearchTerm(false);
+      (fetchData(searchTerm, page*15+1).then(function(result){
+        setData ([...result.items])
+}))
+setLoading(false);
+    }else{
+      setInvalidSearchTerm(true)
+    }
+    
+   
+    }, [searchTerm.length])
    
   return (
     <>
     <Container>
+    
     <Top> 
     {/* <div>
       <FilterPrice />
     </div> */}
-   
+  
       <Grid>
           <span className={grid ? '' : 'active'} onClick={()=>setGrid(!grid)}><TfiLayoutListThumbAlt/></span>
           <span className={grid ? 'active' : ''} onClick={()=>setGrid(!grid)}><TfiLayoutGrid3Alt /></span>
        
       </Grid>
     </Top>
-    {grid ? 
+    {!invalidSearchTerm ? 
+    <div>
+     { grid ? 
     <BooksConatiner>
     {data && !loading ? data.map((item: Item, index:number)=>{
            return <BookItem item={item} key={item.etag}/>
@@ -94,7 +114,9 @@ setData(t)
     <ToTop />
    
  <LoadMore onClick={handelPage}>More</LoadMore>
-</BooksConatiner2>}
+</BooksConatiner2> }
+</div>: <p>ççç</p>}
+
     </Container>
    
       </>

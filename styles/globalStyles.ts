@@ -70,7 +70,10 @@ li {
 .vertical-timeline::before {
  background:#f4e6 ;
 }
+.vertical-timeline--animate .vertical-timeline-element-content.bounce-in{
+  background:#f6e0f466
 
+}
 
 `
 

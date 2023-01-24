@@ -108,6 +108,17 @@ border-radius: 10px;
     margin-right:15px ;
 `
 
+  export const DropDownMenu = styled(Dropdown.Menu)<{
+  show: boolean;
+}>`
+  transform: translate(-250px, 30px) !important;  
+  width:300px ;
+  box-shadow: ${props=>props.theme.alertBoxshdow};
+ display:${props=>props.show ? 'block' : 'none'}
+`;
+export const DropdownS = styled(Dropdown)`
+  /* right: -16px !important; */
+`;
 export const DropDownToggle = styled(Dropdown.Toggle)`
   background-color: transparent !important;
  border:none !important ;
@@ -119,17 +130,14 @@ export const DropDownToggle = styled(Dropdown.Toggle)`
   &::after{
 display:none ;
   }
+`
 
-  `
-  export const DropDownMenu = styled(Dropdown.Menu)`
-  /* right: -16px !important; */
-  transform: translate(-250px, 40px) !important;  
-  width:300px ;
-
- 
-`;
 export const Input = styled.input`
-
+width:100% ;
+height:30px ;
+border-radius:8px ;
+border:1px solid ${props=>props.theme.orange} ;
+padding:10px ;
 
 
 `;

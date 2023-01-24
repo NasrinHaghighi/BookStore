@@ -1,5 +1,5 @@
 import React ,{useState}from 'react'
-import {Wapper,HeaderWrapper, Logo, Nav, NavItem, Wrapper,Wrapper2, Lens,Basket, ShopItems, DropDownToggle, DropDownMenu, Input} from './styles'
+import {Wapper,HeaderWrapper, Logo, Nav, NavItem, Wrapper,Wrapper2, Lens,Basket, ShopItems, DropdownS,DropDownToggle, DropDownMenu, Input} from './styles'
 import { Images } from "../../helpers/Image";
 import Link from "next/link";
 import { RxHome } from "react-icons/rx";
@@ -10,9 +10,24 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Dropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import { useRouter } from "next/router";
+import { useAppDispatch, useAppSelector } from '../../redux/hooks'
+import {selectedSearch} from '../../features/searchSlice'
 
 function Header() {
+  const dispatch=useAppDispatch()
       const [show, setShow] = useState(false);
+      const [route, setRoute] = useState()
+      const router = useRouter()
+     const searchHandel=(e:any)=>{
+      e.preventDefault()
+      dispatch(selectedSearch(e.target.value))
+     setTimeout(() => {
+      router.push("/books")
+     }, 1000);
+     
+     
+     }
   return (
       <Wapper>
     <HeaderWrapper>
@@ -36,7 +51,7 @@ function Header() {
         <Wrapper2>
             {/* *****************SEARCH***** */}
         <Lens >
-        <Dropdown
+        <DropdownS
       onMouseOver={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
@@ -44,14 +59,15 @@ function Header() {
        <BsSearch />
       </DropDownToggle>
 
-      <DropDownMenu >
+      <DropDownMenu show={show}>
         <Dropdown.Item >
-            <Input></Input>
+            <Input onChange={searchHandel}></Input>
         </Dropdown.Item>
        
       </DropDownMenu>
-    </Dropdown>
+    </DropdownS>
         </Lens>
+           {/* *****************SEARCH***** */}
         <Basket><ShopItems>2</ShopItems> <FaShoppingCart />  </Basket>
             
         </Wrapper2>

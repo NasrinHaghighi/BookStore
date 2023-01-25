@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Dropdown } from "react-bootstrap";
+
 export const BasketContainer = styled.div`
 color: ${props=>props.theme.linkColor};
 font-size:18px ;
-padding:0 30px ;
 
 border-left:1px solid ${props=>props.theme.grayBorder}  ;
 display:flex ;
@@ -24,7 +24,7 @@ export const DropDownToggle = styled(Dropdown.Toggle)`
  border:none !important ;
   position: relative;
   overflow: hidden;
-  padding:0 30px ;
+  width:100%;
   font-size:18px ;
   color:${props=>props.theme.orange} !important;
   display:flex ;
@@ -36,7 +36,7 @@ display:none ;
 export const DropDownMenu = styled(Dropdown.Menu)<{
   show: boolean;
 }>`
-  transform: translate(-400px, 30px) !important;  
+  transform: translate(0px, 30px) !important;  
  width:500px ;
   box-shadow: ${props=>props.theme.alertBoxshdow};
  display:${props=>props.show ? 'block' : 'none'};

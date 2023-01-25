@@ -15,6 +15,7 @@ import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 
 import { selectedcategory } from '../../features/CategorySlice'
 import Basket from '../Basket/Basket';
+import ShopDropdown from './ShopDropdown/ShopDropdown';
 
 function Header() {
   const category = useAppSelector(state=>state.category?.category)
@@ -43,7 +44,9 @@ function Header() {
               <RxHome /><Link href='/'><span>Home</span></Link> 
         </NavItem>
         <NavItem>
-             <Link href='/books'><span>Shop</span></Link> 
+             <Link href='/books'>
+            <ShopDropdown />
+              </Link> 
         </NavItem>
         <NavItem>
               <FaNewspaper/><span>About us</span> 

@@ -4,7 +4,7 @@ import  BookSlice  from '../features/bookSlice';
 import CategorySlice from '../features/CategorySlice';
 import PageSlice from '../features/PageSlice';
 import priceFilter from '../features/priceFilter'
-
+import scrollTo from '../features/scrollTo';
 
 export const store = configureStore({
       reducer: {
@@ -12,6 +12,7 @@ export const store = configureStore({
         page:PageSlice,
         books:BookSlice,
         price:priceFilter,
+        tag:scrollTo
       
    },
    middleware: (getDefaultMiddleware) =>

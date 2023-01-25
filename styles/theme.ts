@@ -7,6 +7,8 @@ export const themes = {
     textStrong:'#2B2B2B',
     linkColor:'#f47721',
     orange:'#ffa500',
+    lightorange:'#ffbd2c',
+    lightPink:'#fff0da',
     requierText:'#c02b0a',
     grayBorder:'#BDBDBD',
    boxshadow:'1px 1px 13px 1px #0000006b',

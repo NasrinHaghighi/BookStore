@@ -51,7 +51,7 @@ align-items:center ;
 `
 
 export const NavItem = styled.div`
-padding:10px 15px ;
+padding:10px 13px ;
 font-size:18px ;
 display:flex ;
 justify-content:center ;
@@ -94,7 +94,7 @@ padding:0 30px ;
   export const DropDownMenu = styled(Dropdown.Menu)<{
   show: boolean;
 }>`
-  transform: translate(-250px, 30px) !important;  
+  transform: translate(-200px, 30px) !important;  
   width:300px ;
   box-shadow: ${props=>props.theme.alertBoxshdow};
  display:${props=>props.show ? 'block' : 'none'}

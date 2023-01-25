@@ -26,7 +26,7 @@ function Main() {
 
 const price=useAppSelector(state=>state.price.price)
 
-console.log(category)
+//console.log(category)
 useEffect(() => {
 const t= data.filter((item)=>{
  return item.volumeInfo.pageCount>= price[0] && item.volumeInfo.pageCount <= price[1]

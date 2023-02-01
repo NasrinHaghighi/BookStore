@@ -8,27 +8,27 @@ import CategorySectio from "../components/CategorySection/CategorySectio";
 import ReactVerticalTimelineComponentTests from "../components/TimeLine/TimeLine";
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 
-
+import Discount from '../components/Discount/Discount'
 
 const Home: NextPage = () => {
 const tag=useAppSelector(state=>state.tag.tag)
 console.log(tag)
-  const features=useRef(null)
+const scollToRef = useRef<HTMLDivElement>(null);
 
 
-  useEffect(() => {
-  window.scrollTo({
-   
-  })
-  }, [tag])
+  // useEffect(() => {
+  //   scollToRef?.current?.scrollIntoView()
+  // }, [tag])
+
+
   return (
     <>
-    <Slider />
+     <Slider />
     <CategorySectio />
     <ReactVerticalTimelineComponentTests />
-    <Features title='art' ref={features}/> 
-    <div>discont</div>
-    <div>authors</div>
+    <Features title='art'/> 
+  <Discount />
+    <div >authors</div>
 
     </>
   );

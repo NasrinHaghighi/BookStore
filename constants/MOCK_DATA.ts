@@ -94,7 +94,7 @@ export const Books=[
     author:'Mary Beth Keane',
     price:33.00,
     descriptin:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat.',
-    image:'/books/25.jpg'
+    image:'/books/24.jpg'
     , icon:'woman',
     face:'/face/6.jpg'
 

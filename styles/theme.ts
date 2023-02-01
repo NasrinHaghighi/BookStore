@@ -16,7 +16,9 @@ export const themes = {
    alertBoxshdow:'0 10px 30px rgb(0 0 0 / 10%)',
    red:'#DB1037',
    graytext:'#616161',
-   bachgroundColor:'#2B2B2B'
+   bachgroundColor:'#2B2B2B',
+   lightRed:'#f75454'
+
    
       
   };

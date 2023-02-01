@@ -24,7 +24,7 @@ export interface Item{
     }
 }
 
-function Features({ title, ref }: { title: string, ref:any  }) {
+function Features({ title }: { title: string }) {
     const [data, setData] =useState([])
 
     useEffect( () => {
@@ -33,9 +33,9 @@ function Features({ title, ref }: { title: string, ref:any  }) {
       }))
     }, [])
 
-console.log(data)
+//console.log(data)
   return (
-    <FlexConatiner ref={ref}>
+    <FlexConatiner >
       <Flex>
         <h2>Art</h2>
        <ListConatiner>

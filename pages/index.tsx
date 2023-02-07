@@ -10,6 +10,7 @@ import { useAppDispatch, useAppSelector } from '../redux/hooks';
 
 import Discount from '../components/Discount/Discount'
 
+
 const Home: NextPage = () => {
 const tag=useAppSelector(state=>state.tag.tag)
 console.log(tag)

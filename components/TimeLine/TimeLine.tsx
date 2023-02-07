@@ -39,8 +39,7 @@ export default class ReactVerticalTimelineComponentTests extends React.Component
                     iconStyle={woman ? wonamIcon : manIcon}
                     icon={woman ? <CgGirl/> : <CgBoy/>}
                     onTimelineElementClick={this.elementClick}
-                   
-                    >
+                   >
                        
                        
                      

@@ -38,7 +38,7 @@ export const Books=[
     author:'Conn Iggulden',
     price:27.00,
     descriptin:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat.',
-    image:'/books/20.jpg',
+    image:'/books/25.jpg',
     icon:'man',
     face:'/face/4.jpg'
 
@@ -108,6 +108,39 @@ export const Books=[
     image:'/books/26.jpg',
     icon:'woman',
     face:'/face/6.jpg'
+
+  },
+  {
+    id:11,
+    title:'Dark in Death: An Eve Dallas Novel',
+    author:'J. D. Robb',
+    price:24.00,
+    descriptin:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat.',
+    image:'/books/20.jpg',
+  icon:'woman',
+  face:'/face/1.jpg'
+
+  },
+  {
+    id:12,
+    title:'Angry God ',
+    author:'L.J. Shen',
+    price:26.00,
+    descriptin:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat.',
+    image:'/books/19.jpg',
+    icon:'man',
+    face:'/face/2.jpg'
+
+  },
+  {
+    id:13,
+    title:'The Last Sister ',
+    author:'Conn Iggulden',
+    price:27.00,
+    descriptin:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat.',
+    image:'/books/25.jpg',
+    icon:'woman',
+    face:'/face/3.jpg'
 
   },
 

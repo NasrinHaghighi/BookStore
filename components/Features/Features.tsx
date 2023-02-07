@@ -10,10 +10,25 @@ import 'swiper/css';
 
 
 
+export interface Item{
+    id:string,
+    etag:string,
+    volumeInfo:{
+      description:string,
+      pageCount:number,
+        title:string,
+        subtitle:string,
+        authors:string[],
+        categort:string[]
+        imageLinks:{
+            smallThumbnail:string,
+            thumbnail:string
+        }
+          
+    }
+}
 
-
-function Features() {
-
+function Features({ title }: { title: string }) {
   const [data, setdata] =useState<any>([])
   function sliceIntoChunks(arr:any, chunkSize:number) {
     const res = [];
@@ -58,5 +73,7 @@ return  <SwiperSlideStyled>
     </FlexConatiner>
   )
 }
+
+
 
 export default Features

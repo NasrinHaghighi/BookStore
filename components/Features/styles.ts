@@ -36,8 +36,9 @@ export const ListConatiner=styled.div`
 `
 
 export const SwiperSlideStyled=styled(SwiperSlide)`
-padding: 80px 30px;
+padding: 80px 50px;
 display:flex ;
+
 
 &:hover{
    &>div:first-child{
@@ -66,6 +67,7 @@ display:flex ;
    border:5px solid #ffff ;
    border-radius:12px ;
    z-index:2 ;
+   transition:all 0.3s ease-in-out ;
    transform: translate(-670px, -40px);
 }
 

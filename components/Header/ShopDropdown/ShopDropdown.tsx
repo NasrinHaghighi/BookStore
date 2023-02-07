@@ -30,13 +30,21 @@ const dispatch=useAppDispatch()
     <DropDownMenuShop show={show}>
         <Top>
             <First>
-                <DropdownItem onClick={()=>handelScroll('featuers')}><Link href='/'>Features</Link></DropdownItem>
+                <DropdownItem onClick={()=>handelScroll('featuers')}><Link href='/#feat'>Features</Link></DropdownItem>
+
+
                 <DropdownItem href="/" 
                 onClick={()=>handelScroll('disconts')}
-                ><Link href='/'>Disconts</Link></DropdownItem>
+                ><Link href='/#discont'>Disconts</Link></DropdownItem>
+
                 <DropdownItem href="/"
                 onClick={()=>handelScroll('authors')}><Link href='/'>Authors</Link></DropdownItem>
             </First>
+
+
+
+
+
             <Second>2</Second>
             <Third>3</Third>
             <Fourth>

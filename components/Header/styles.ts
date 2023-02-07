@@ -5,6 +5,9 @@ export const Wapper=styled.div`
 width:100% ;
 height:100px ;
 background-color:#fff ;
+position:sticky ;
+top:0 ;
+z-index:5 ;
 `
 export const HeaderWrapper = styled.nav`
     position: relative;

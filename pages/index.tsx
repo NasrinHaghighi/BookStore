@@ -14,6 +14,8 @@ import Discount from '../components/Discount/Discount'
 const Home: NextPage = () => {
 const tag=useAppSelector(state=>state.tag.tag)
 console.log(tag)
+
+
 const scollToRef = useRef<HTMLDivElement>(null);
 
 
@@ -27,8 +29,8 @@ const scollToRef = useRef<HTMLDivElement>(null);
      <Slider />
     <CategorySectio />
     <ReactVerticalTimelineComponentTests />
-    <Features title='art'/> 
-  <Discount />
+    <Features id='feat'/> 
+    <Discount id='discont'/>
     <div >authors</div>
 
     </>

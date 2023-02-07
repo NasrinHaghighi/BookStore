@@ -11,14 +11,14 @@ import { Books } from "../../constants/MOCK_DATA";
 
 const tabData=['History', 'Science & Math', 'Romance', 'Travel']
 
-function Discount() {
+function Discount({id}) {
     const [active, setActive] =useState('History')
 
-console.log(active)
+//console.log(active)
 
 
   return (
-    <Conatiner>
+    <Conatiner id={id}>
         <InnerConatiner>
         <Top>
             <Title>Special Discount</Title>

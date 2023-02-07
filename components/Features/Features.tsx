@@ -7,7 +7,8 @@ import { Images } from "../../helpers/Image";
 import { Books } from "../../constants/MOCK_DATA";
 // Import Swiper styles
 import 'swiper/css';
-
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
 
 
 export interface Item{
@@ -28,7 +29,7 @@ export interface Item{
     }
 }
 
-function Features({ title }: { title: string }) {
+function Features({id}:any) {
   const [data, setdata] =useState<any>([])
   function sliceIntoChunks(arr:any, chunkSize:number) {
     const res = [];
@@ -44,14 +45,17 @@ useEffect(()=>{
 setdata(newArr)
 },[])
  
-console.log(data)
+//console.log(data)
   return (
-    <FlexConatiner >
+    <FlexConatiner id={id}>
       <Flex>
         <h2>Featured Books</h2>
    <ListConatiner>
 
    <Swiper
+   navigation={true}
+   modules={[Navigation]}
+    
       spaceBetween={50}
       slidesPerView={3.8}
       onSlideChange={() => console.log('slide change')}
@@ -73,7 +77,5 @@ return  <SwiperSlideStyled>
     </FlexConatiner>
   )
 }
-
-
 
 export default Features

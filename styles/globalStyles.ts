@@ -74,6 +74,14 @@ li {
   background:#f6e0f466
 
 }
+.swiper-button-prev{
+  color:#ffa500 !important;
+  font-weight:900 ;
+}
+.swiper-button-next{
+  color:#ffa500 !important;
+  font-weight:900 ;
+}
 
 `
 

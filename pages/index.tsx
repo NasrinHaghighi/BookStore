@@ -9,6 +9,7 @@ import ReactVerticalTimelineComponentTests from "../components/TimeLine/TimeLine
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 
 import Discount from '../components/Discount/Discount'
+import MovingBanner from "../components/MovingBanner/MovingBanner";
 
 
 const Home: NextPage = () => {
@@ -31,7 +32,7 @@ const scollToRef = useRef<HTMLDivElement>(null);
     <ReactVerticalTimelineComponentTests />
     <Features id='feat'/> 
     <Discount id='discont'/>
-    <div >authors</div>
+    <MovingBanner />
 
     </>
   );

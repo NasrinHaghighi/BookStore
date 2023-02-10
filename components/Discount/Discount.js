@@ -21,7 +21,7 @@ function Discount({id}) {
     <Conatiner id={id}>
         <InnerConatiner>
         <Top>
-            <Title>Special Discount</Title>
+            <Title><h2>Special Discount</h2></Title>
           <Tabs>{tabData.map((item, index)=>{
             return <div
              key={index} 
@@ -34,7 +34,7 @@ function Discount({id}) {
             <Image>
                 <Banner> 
                 {active === 'History' || active === 'Romance' ?
-                    <Images src='/4.svg' width={300} height={200}   alt="book"/> : <Images src='/5.png' width={300} height={200}   alt="book"/>}
+                    <Images src='/4.svg' width={380} height={300}   alt="book"/> : <Images src='/5.png' width={380} height={300}   alt="book"/>}
                     </Banner>
                 <Text>
                     <p>Get Extra</p>

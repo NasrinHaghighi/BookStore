@@ -11,8 +11,6 @@ export const DropDownMenuShop = styled(Dropdown.Menu)<{
     box-shadow: ${props=>props.theme.alertBoxshdow};
    display:${props=>props.show ? 'block' : 'none'};
    padding:30px;
- background-color:red;
-
    @media (max-width:1700px) {
     width: calc(1300px - 100px);
 

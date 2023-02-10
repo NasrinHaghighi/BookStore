@@ -40,12 +40,12 @@ const dispatch=useAppDispatch()
                 <DropdownItem href="/"
                 onClick={()=>handelScroll('authors')}><Link href='/'>Authors</Link></DropdownItem>
             </First>
-
-
-
-
-
-            <Second>2</Second>
+           
+            <Second>
+              <ul>
+                
+              </ul>
+            </Second>
             <Third>3</Third>
             <Fourth>
             <Images src='/books/23.jpg' width={200} height={250}   alt="book"/>

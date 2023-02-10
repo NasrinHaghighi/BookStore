@@ -5,19 +5,27 @@ max-width: 100%;
  margin:0 auto ;
 `
 export const InnerConatiner=styled.div`
-max-width: 1720px;
+max-width: 1920px;
  margin:0 auto ;
- padding:30px 50px ;
+ padding:100px 50px ;
 
 
 `
 export const Title=styled.div`
-    font-size: 1.875rem;
-width:50%;
-
-display:flex ;
-    justify-content:center ;
-    align-items:center ;
+&>h2{
+    font-weight:700 ;
+    position:relative ;
+    margin-bottom:30px ;
+ &:after{
+    content: " ";
+    width: 30px;
+    height: 3px;
+    background-color:${props=>props.theme.orange} ;
+    position: absolute;
+    left: 0;
+    bottom:-10px ;
+ }   
+}
 
 
 `

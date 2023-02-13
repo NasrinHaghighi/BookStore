@@ -7,32 +7,27 @@ import Slider from "../components/Slider/SliderCo";
 import CategorySectio from "../components/CategorySection/CategorySectio";
 import ReactVerticalTimelineComponentTests from "../components/TimeLine/TimeLine";
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
-
+import Aduio from "../components/Aduio/Aduio";
 import Discount from '../components/Discount/Discount'
 import MovingBanner from "../components/MovingBanner/MovingBanner";
 
+import handleViewport from 'react-in-viewport';
+
+
+
 
 const Home: NextPage = () => {
-const tag=useAppSelector(state=>state.tag.tag)
-console.log(tag)
-
-
-const scollToRef = useRef<HTMLDivElement>(null);
-
-
-  // useEffect(() => {
-  //   scollToRef?.current?.scrollIntoView()
-  // }, [tag])
-
 
   return (
     <>
      <Slider />
     <CategorySectio />
-    <ReactVerticalTimelineComponentTests />
+    
     <Features id='feat'/> 
     <Discount id='discont'/>
     <MovingBanner />
+    <Aduio />
+    <ReactVerticalTimelineComponentTests />
 
     </>
   );

@@ -14,7 +14,7 @@ const move = keyframes`
 
 export const Container=styled.div`
 position:relative ;
-width:124% ;
+width:100% ;
 height:80vh ;
 
 `

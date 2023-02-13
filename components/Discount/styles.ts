@@ -64,12 +64,15 @@ margin:30px 0 ;
 
 export const Image=styled.div`
 padding:70px 20px ;
-text-align:center;
+text-align:center ;
+padding-right:150px ;
+
 `
 export const Text=styled.div`
 font-size:3.5rem ;
 line-height:3rem ;
 margin-top:30px ;
+
 &>p{
     &.sale{
 color:${props=>props.theme.lightRed}
